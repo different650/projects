@@ -1,0 +1,655 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poor Story', 'Noto Sans KR', sans-serif;
+  font-size: 18px;
+  color: #5a3e36;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+  background-color: #fff8ef;
+  /* min-height: 910px; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (min-width: 1024px) {
+
+  /* ---------------------------- Aside ---------------------------- */
+  html {
+    font-size: 18px;
+  }
+
+  body {
+    height: 100vh;
+    min-height: 945px;
+  }
+
+  .sidebar {
+    flex: 1;
+    border-right: 1px solid #111;
+    padding: 40px 0;
+    height: 100%;
+    white-space: normal;
+    /* 줄바꿈 허용 */
+    word-break: keep-all;
+    /* 단어 중간에서 잘리지 않도록 */
+    overflow: hidden;
+    /* 사이드바는 스크롤 안 됨 */
+    white-space: normal;
+    /* 줄바꿈 허용 */
+    word-break: keep-all;
+    /* 단어 중간에서 잘리지 않도록 */
+    overflow-wrap: normal;
+    /* 강제 줄바꿈 방지 */
+    line-height: 25px;
+  }
+
+  .sidebar aside {
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .sidebar aside section {
+    border-bottom: 1px solid #111;
+    padding: 20px 8%;
+  }
+
+  .sidebar aside h1,
+  .sidebar aside h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #111;
+  }
+
+  .sidebar aside nav {
+    padding: 20px 8%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .sidebar aside nav ul {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+    /* 내용 길면 스크롤 */
+  }
+
+  .sidebar aside nav ul li {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 0;
+  }
+
+  .sidebar aside nav h2 {
+    margin-bottom: 0;
+  }
+
+  /* ---------------------------- Main ---------------------------- */
+  .book-list {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+  }
+
+  .book-list ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #111;
+  }
+
+  .book-list ul li {
+    border-bottom: 1px solid #111;
+    border-right: 1px solid #111;
+  }
+
+  .book-list ul li:nth-child(5n) {
+    border-right: none;
+  }
+
+  .book-list ul li:nth-last-child(-n+5) {
+    border-bottom: none;
+  }
+
+  .book-list ul li a {
+    height: 100%;
+    display: block;
+  }
+
+  .book-list ul li img {
+    max-height: 220px;
+    width: auto;
+    display: block;
+    border: 1px solid #111;
+    margin: 10% auto;
+  }
+
+  .book-list ul li figure {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .book-list ul li figure figcaption {
+    flex: 1;
+  }
+
+  .book-list ul li figure figcaption dl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .book-list ul li figure figcaption dl dt {
+    margin-bottom: 10%;
+    padding: 0 5%;
+    line-height: 25px;
+    white-space: normal;
+    /* 줄바꿈 허용 */
+    word-break: keep-all;
+    /* 단어 중간에서 잘리지 않도록 */
+    overflow-wrap: normal;
+    /* 강제 줄바꿈 방지 */
+  }
+
+  .book-list ul li figure figcaption dl dd {
+    margin-top: auto;
+    border-top: 1px solid #111;
+    padding: 5%;
+  }
+
+  /* ---------------------------- Hover ---------------------------- */
+  .book-list ul li:hover dd {
+    background-color: #e07a5f;
+    color: #fff;
+  }
+
+  /* ---------------------------- Paging ---------------------------- */
+  .paging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    height: 80px;
+  }
+
+  .paging ol {
+    list-style: none;
+  }
+
+  .paging ol li {
+    display: inline-block;
+  }
+
+  /* active 상태 */
+  .paging ol li a,
+  nav ul li a {
+    display: inline-block;
+    /* 반드시 적용 */
+    padding: 10px;
+    transition: transform 0.2s;
+    /* 부드럽게 회전 */
+  }
+
+  .paging ol li a.active,
+  nav ul li a.active {
+    transform: rotate(-5deg);
+    background-color: #e07a5f;
+    color: #fff8ef;
+  }
+
+  .paging ol li a:hover,
+  nav ul li a:hover {
+    transform: rotate(-5deg);
+    background-color: #e07a5f;
+    color: #fff8ef;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  /* ---------------------------- Aside ---------------------------- */
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .sidebar {
+    flex: 1;
+    border-right: 1px solid #111;
+    padding: 30px 0;
+    height: 100vh;
+    /* 사이드바도 화면 높이 고정 */
+    overflow: hidden;
+    /* 사이드바는 스크롤 안 됨 */
+    white-space: normal;
+    /* 줄바꿈 허용 */
+    word-break: keep-all;
+    /* 단어 중간에서 잘리지 않도록 */
+    overflow-wrap: normal;
+    /* 강제 줄바꿈 방지 */
+    line-height: 22px;
+  }
+
+  .sidebar aside {
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .sidebar aside section {
+    border-bottom: 1px solid #111;
+    padding: 15px 5%;
+  }
+
+  .sidebar aside h1,
+  .sidebar aside h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #111;
+  }
+
+  .sidebar aside nav {
+    padding: 20px 8%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .sidebar aside nav ul {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+    /* 내용 길면 스크롤 */
+  }
+
+  .sidebar aside nav ul li {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 0;
+  }
+
+  .sidebar aside nav h2 {
+    margin-bottom: 0;
+  }
+
+  /* ---------------------------- Main ---------------------------- */
+  .book-list {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+  }
+
+  .book-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #111;
+    height: calc(100vh - 70px - 60px);
+    overflow-y: auto;
+    /* 내용 길면 스크롤 */
+  }
+
+  .book-list ul li {
+    border-bottom: 1px solid #111;
+    border-right: 1px solid #111;
+  }
+
+  .book-list ul li:nth-child(3n) {
+    border-right: none;
+  }
+
+  .book-list ul li:last-of-type {
+    border-bottom: none;
+  }
+
+  .book-list ul li a {
+    height: 100%;
+    display: block;
+  }
+
+  .book-list ul li img {
+    max-height: 200px;
+    width: auto;
+    display: block;
+    border: 1px solid #111;
+    margin: 8% auto;
+  }
+
+  .book-list ul li figure {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .book-list ul li figure figcaption {
+    flex: 1;
+  }
+
+  .book-list ul li figure figcaption dl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .book-list ul li figure figcaption dl dt {
+    margin-bottom: 8%;
+    padding: 0 5%;
+    line-height: 22px;
+    white-space: normal;
+    /* 줄바꿈 허용 */
+    word-break: keep-all;
+    /* 단어 중간에서 잘리지 않도록 */
+    overflow-wrap: normal;
+    /* 강제 줄바꿈 방지 */
+  }
+
+  .book-list ul li figure figcaption dl dd {
+    margin-top: auto;
+    border-top: 1px solid #111;
+    line-height: 38px;
+    min-height: 38px;
+  }
+
+  /* ---------------------------- Hover ---------------------------- */
+  .book-list ul li:hover dd {
+    background-color: #e07a5f;
+    color: #fff;
+  }
+
+  /* ---------------------------- Paging ---------------------------- */
+  .paging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    height: 70px;
+    flex-shrink: 0;
+    /* 스크롤 영향 없이 고정 */
+  }
+
+  .paging ol {
+    list-style: none;
+  }
+
+  .paging ol li {
+    display: inline-block;
+  }
+
+  /* active 상태 */
+  .paging ol li a,
+  nav ul li a {
+    display: inline-block;
+    /* 반드시 적용 */
+    padding: 8px;
+    transition: transform 0.2s;
+    /* 부드럽게 회전 */
+  }
+
+  .paging ol li a.active,
+  nav ul li a.active {
+    transform: rotate(-5deg);
+    background-color: #e07a5f;
+    color: #fff8ef;
+  }
+
+  .paging ol li a:hover,
+  nav ul li a:hover {
+    transform: rotate(-5deg);
+    background-color: #e07a5f;
+    color: #fff8ef;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  /* ---------------------------- Aside ---------------------------- */
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .sidebar {
+    flex: 1;
+    border-right: 1px solid #111;
+    padding: 20px 0;
+    height: 100vh;
+    /* 사이드바도 화면 높이 고정 */
+    overflow: hidden;
+    /* 사이드바는 스크롤 안 됨 */
+    white-space: normal;
+    /* 줄바꿈 허용 */
+    word-break: keep-all;
+    /* 단어 중간에서 잘리지 않도록 */
+    overflow-wrap: normal;
+    /* 강제 줄바꿈 방지 */
+    line-height: 20px;
+  }
+
+  .sidebar aside {
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar aside section {
+    border-bottom: 1px solid #111;
+    padding: 10px 3%;
+  }
+
+  .sidebar aside h1,
+  .sidebar aside h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #111;
+  }
+
+  .sidebar aside nav {
+    padding: 20px 8%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .sidebar aside nav ul {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+    /* 내용 길면 스크롤 */
+  }
+
+  .sidebar aside nav ul li {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0;
+  }
+
+  .sidebar aside nav h2 {
+    margin-bottom: 0;
+  }
+
+  /* ---------------------------- Main ---------------------------- */
+  .book-list {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .book-list ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #111;
+    height: calc(100vh - 50px - 40px);
+    overflow-y: auto;
+    /* 내용 길면 스크롤 */
+  }
+
+  .book-list ul li {
+    border-bottom: 1px solid #111;
+  }
+
+  .book-list ul li:last-of-type {
+    border-bottom: none;
+  }
+
+  .book-list ul li a {
+    height: 100%;
+    display: block;
+  }
+
+  .book-list ul li img {
+    max-height: 180px;
+    width: auto;
+    display: block;
+    border: 1px solid #111;
+    margin: 5% auto;
+  }
+
+  .book-list ul li figure {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .book-list ul li figure figcaption {
+    flex: 1;
+  }
+
+  .book-list ul li figure figcaption dl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .book-list ul li figure figcaption dl dt {
+    margin-bottom: 6%;
+    padding: 0 5%;
+    line-height: 20px;
+    white-space: normal;
+    /* 줄바꿈 허용 */
+    word-break: keep-all;
+    /* 단어 중간에서 잘리지 않도록 */
+    overflow-wrap: normal;
+    /* 강제 줄바꿈 방지 */
+  }
+
+  .book-list ul li figure figcaption dl dd {
+    margin-top: auto;
+    border-top: 1px solid #111;
+    padding: 3%;
+  }
+
+  /* ---------------------------- Hover ---------------------------- */
+  .book-list ul li:hover dd {
+    background-color: #e07a5f;
+    color: #fff;
+  }
+
+  /* ---------------------------- Paging ---------------------------- */
+  .paging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    height: 50px;
+    flex-shrink: 0;
+    /* 스크롤 영향 없이 고정 */
+  }
+
+  .paging ol {
+    list-style: none;
+  }
+
+  .paging ol li {
+    display: inline-block;
+  }
+
+  /* active 상태 */
+  .paging ol li a,
+  nav ul li a {
+    display: inline-block;
+    /* 반드시 적용 */
+    padding: 6px;
+    transition: transform 0.2s;
+    /* 부드럽게 회전 */
+  }
+
+  .paging ol li a.active,
+  nav ul li a.active {
+    transform: rotate(-5deg);
+    background-color: #e07a5f;
+    color: #fff8ef;
+  }
+
+  .paging ol li a:hover,
+  nav ul li a:hover {
+    transform: rotate(-5deg);
+    background-color: #e07a5f;
+    color: #fff8ef;
+  }
+}
