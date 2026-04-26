@@ -197,7 +197,7 @@ a {
     border-radius: 0 15px 15px 0;
     border: 1px solid #800020;
     border-left: none;
-    padding: 30px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
   }
@@ -206,7 +206,7 @@ a {
   .content header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   /* list */
@@ -223,7 +223,7 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 30px;
+    gap: 25px;
     padding-right: 5px;
   }
 
@@ -262,7 +262,7 @@ a {
 
   .paging {
     display: flex;
-    margin-top: 30px;
+    margin-top: 25px;
     justify-content: center;
     align-items: center;
   }
@@ -281,8 +281,8 @@ a {
     justify-content: center;
     align-items: center;
 
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
   .paging ol li a.active {
@@ -294,7 +294,7 @@ a {
 
   /* 오른쪽 */
   .menu {
-    width: 30px;
+    width: 25px;
     height: 92%;
   }
 
@@ -359,7 +359,7 @@ a {
   .content header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   /* list */
@@ -376,7 +376,7 @@ a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    gap: 30px;
+    gap: 20px;
     padding-right: 5px;
   }
 
@@ -415,7 +415,7 @@ a {
 
   .paging {
     display: flex;
-    margin-top: 30px;
+    margin-top: 20px;
     justify-content: center;
     align-items: center;
   }
@@ -434,8 +434,8 @@ a {
     justify-content: center;
     align-items: center;
 
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
   }
 
   .paging ol li a.active {
@@ -447,7 +447,7 @@ a {
 
   /* 오른쪽 */
   .menu {
-    width: 30px;
+    width: 20px;
     height: 92%;
   }
 
