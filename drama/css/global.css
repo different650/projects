@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poor Story', 'Noto Sans KR', sans-serif;
+  font-size: 18px;
+  color: #5a3e36;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  background-color: #fff8ef;
+  /* min-height: 910px; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (min-width: 1024px) {
+  .layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+
+  /* 왼쪽 */
+  .content {
+    width: 100%;
+    height: 96%;
+    background-color: #fff;
+    border-radius: 0 15px 15px 0;
+    border: 1px solid #800020;
+    border-left: none;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* header */
+  .content header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  /* list */
+  .drama-list {
+    width: 100%;
+    /* height: 100%; */
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .drama-list>ul {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    padding-right: 5px;
+  }
+
+  .drama-list>ul>li {
+    border: 1px solid #111;
+    list-style: none;
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  .drama-list>ul>li figure figcaption ul li {
+    list-style: none;
+  }
+
+  .drama-list>ul>li figure img {
+    width: 100%;
+  }
+
+
+  /* page */
+  .paging {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+  }
+
+  .paging ol {
+    list-style: none;
+    display: flex;
+  }
+
+    .paging ol li{
+      padding: 0 10px;
+    }
+
+  /* 오른쪽 */
+  .menu {
+    width: 30px;
+    height: 92%;
+  }
+
+  .menu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu ul li {
+    width: 100%;
+    height: 100%;
+    writing-mode: vertical-rl;
+    flex: 1;
+  }
+
+  .menu ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 0 15px 15px 0;
+    border: 1px solid #800020;
+    border-left: none;
+  }
+
+  .menu ul li a.active {
+    background-color: #800020;
+    color: #fff;
+  }
+}
