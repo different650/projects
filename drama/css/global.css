@@ -25,7 +25,7 @@ a {
   color: inherit;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .layout {
     display: flex;
     width: 100%;
@@ -84,14 +84,31 @@ a {
 
   .drama-list>ul>li figure img {
     width: 100%;
+    margin-bottom: 20px;
   }
 
+  .drama-list>ul>li figure figcaption ul li {
+    margin-bottom: 10px;
+  }
+
+  .drama-list>ul>li figure figcaption ul li:first-of-type {
+    font-weight: 700;
+  }
+
+  .drama-list>ul>li figure figcaption ul li:last-of-type {
+    line-height: 22px;
+  }
 
   /* page */
+  .paging a {
+    padding: 0 5px;
+  }
+
   .paging {
     display: flex;
     margin-top: 30px;
     justify-content: center;
+    align-items: center;
   }
 
   .paging ol {
@@ -99,9 +116,323 @@ a {
     display: flex;
   }
 
-    .paging ol li{
-      padding: 0 10px;
-    }
+  .paging ol li {
+    padding: 0 5px;
+  }
+
+  .paging ol li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+  }
+
+  .paging ol li a.active {
+    border-radius: 50%;
+    background-color: #800020;
+    color: #fff;
+  }
+
+
+  /* 오른쪽 */
+  .menu {
+    width: 30px;
+    height: 92%;
+  }
+
+  .menu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu ul li {
+    width: 100%;
+    height: 100%;
+    writing-mode: vertical-rl;
+    flex: 1;
+  }
+
+  .menu ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 0 15px 15px 0;
+    border: 1px solid #800020;
+    border-left: none;
+  }
+
+  .menu ul li a.active {
+    background-color: #800020;
+    color: #fff;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+
+  /* 왼쪽 */
+  .content {
+    width: 100%;
+    height: 96%;
+    background-color: #fff;
+    border-radius: 0 15px 15px 0;
+    border: 1px solid #800020;
+    border-left: none;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* header */
+  .content header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  /* list */
+  .drama-list {
+    width: 100%;
+    /* height: 100%; */
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .drama-list>ul {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 30px;
+    padding-right: 5px;
+  }
+
+  .drama-list>ul>li {
+    border: 1px solid #111;
+    list-style: none;
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  .drama-list>ul>li figure figcaption ul li {
+    list-style: none;
+  }
+
+  .drama-list>ul>li figure img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .drama-list>ul>li figure figcaption ul li {
+    margin-bottom: 10px;
+  }
+
+  .drama-list>ul>li figure figcaption ul li:first-of-type {
+    font-weight: 700;
+  }
+
+  .drama-list>ul>li figure figcaption ul li:last-of-type {
+    line-height: 22px;
+  }
+
+  /* page */
+  .paging a {
+    padding: 0 5px;
+  }
+
+  .paging {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .paging ol {
+    list-style: none;
+    display: flex;
+  }
+
+  .paging ol li {
+    padding: 0 5px;
+  }
+
+  .paging ol li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+  }
+
+  .paging ol li a.active {
+    border-radius: 50%;
+    background-color: #800020;
+    color: #fff;
+  }
+
+
+  /* 오른쪽 */
+  .menu {
+    width: 30px;
+    height: 92%;
+  }
+
+  .menu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu ul li {
+    width: 100%;
+    height: 100%;
+    writing-mode: vertical-rl;
+    flex: 1;
+  }
+
+  .menu ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 0 15px 15px 0;
+    border: 1px solid #800020;
+    border-left: none;
+  }
+
+  .menu ul li a.active {
+    background-color: #800020;
+    color: #fff;
+  }
+}
+
+@media screen and (min-width:280px) and (max-width:767px) {
+  .layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+
+  /* 왼쪽 */
+  .content {
+    width: 100%;
+    height: 96%;
+    background-color: #fff;
+    border-radius: 0 15px 15px 0;
+    border: 1px solid #800020;
+    border-left: none;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* header */
+  .content header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  /* list */
+  .drama-list {
+    width: 100%;
+    /* height: 100%; */
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .drama-list>ul {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 30px;
+    padding-right: 5px;
+  }
+
+  .drama-list>ul>li {
+    border: 1px solid #111;
+    list-style: none;
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  .drama-list>ul>li figure figcaption ul li {
+    list-style: none;
+  }
+
+  .drama-list>ul>li figure img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .drama-list>ul>li figure figcaption ul li {
+    margin-bottom: 10px;
+  }
+
+  .drama-list>ul>li figure figcaption ul li:first-of-type {
+    font-weight: 700;
+  }
+
+  .drama-list>ul>li figure figcaption ul li:last-of-type {
+    line-height: 22px;
+  }
+
+  /* page */
+  .paging a {
+    padding: 0 5px;
+  }
+
+  .paging {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .paging ol {
+    list-style: none;
+    display: flex;
+  }
+
+  .paging ol li {
+    padding: 0 5px;
+  }
+
+  .paging ol li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+  }
+
+  .paging ol li a.active {
+    border-radius: 50%;
+    background-color: #800020;
+    color: #fff;
+  }
+
 
   /* 오른쪽 */
   .menu {
