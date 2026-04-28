@@ -233,15 +233,24 @@ body {
     width: 100%;
     color: #fff;
     margin-bottom: 20px;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
   }
 
   header div h1 {
     font-size: 18px;
     letter-spacing: 1px;
     margin-bottom: 5px;
+  }
+
+  header div span {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  header p {
+    text-align: right;
   }
 
   .movie_list {
