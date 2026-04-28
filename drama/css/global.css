@@ -90,8 +90,16 @@ a {
     margin-bottom: 20px;
   }
 
-  .drama-list>ul>li figure figcaption ul li {
+  .drama-list>ul>li figure figcaption ul li:first-of-type {
+    margin-bottom: 15px;
+  }
+
+  .drama-list>ul>li figure figcaption ul li:nth-of-type(2) {
     margin-bottom: 10px;
+  }
+
+  .drama-list>ul>li figure figcaption ul li:last-of-type {
+    margin-bottom: 0px;
   }
 
   .drama-list>ul>li figure figcaption ul li:first-of-type {
@@ -231,7 +239,7 @@ a {
     border: 1px solid #111;
     list-style: none;
     border-radius: 15px;
-    padding: 20px;
+    padding: 15px;
   }
 
   .drama-list>ul>li figure figcaption ul li {
@@ -240,11 +248,19 @@ a {
 
   .drama-list>ul>li figure img {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
-  .drama-list>ul>li figure figcaption ul li {
+  .drama-list>ul>li figure figcaption ul li:first-of-type {
     margin-bottom: 10px;
+  }
+
+  .drama-list>ul>li figure figcaption ul li:nth-of-type(2) {
+    margin-bottom: 5px;
+  }
+
+  .drama-list>ul>li figure figcaption ul li:last-of-type {
+    margin-bottom: 0px;
   }
 
   .drama-list>ul>li figure figcaption ul li:first-of-type {
@@ -252,7 +268,7 @@ a {
   }
 
   .drama-list>ul>li figure figcaption ul li:last-of-type {
-    line-height: 22px;
+    line-height: 20px;
   }
 
   /* page */
@@ -350,7 +366,7 @@ a {
     border-radius: 0 15px 15px 0;
     border: 1px solid #800020;
     border-left: none;
-    padding: 30px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
   }
@@ -384,7 +400,7 @@ a {
     border: 1px solid #111;
     list-style: none;
     border-radius: 15px;
-    padding: 20px;
+    padding: 10px;
   }
 
   .drama-list>ul>li figure figcaption ul li {
@@ -393,11 +409,19 @@ a {
 
   .drama-list>ul>li figure img {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
-  .drama-list>ul>li figure figcaption ul li {
-    margin-bottom: 10px;
+  .drama-list>ul>li figure figcaption ul li:first-of-type {
+    margin-bottom: 5px;
+  }
+
+  .drama-list>ul>li figure figcaption ul li:nth-of-type(2) {
+    margin-bottom: 5px;
+  }
+
+  .drama-list>ul>li figure figcaption ul li:last-of-type {
+    margin-bottom: 0px;
   }
 
   .drama-list>ul>li figure figcaption ul li:first-of-type {
@@ -405,7 +429,7 @@ a {
   }
 
   .drama-list>ul>li figure figcaption ul li:last-of-type {
-    line-height: 22px;
+    line-height: 18px;
   }
 
   /* page */
