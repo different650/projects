@@ -159,6 +159,11 @@ body {
 
   table th {
     letter-spacing: 1px;
+    width: 30%;
+  }
+
+  table td {
+    width: 70%;
   }
 
   .ticket table {
@@ -171,15 +176,6 @@ body {
     padding: 5px;
     vertical-align: middle;
   }
-
-  .ticket table th {
-    width: 30%;
-  }
-
-  .ticket table td {
-    width: 70%;
-  }
-
 
 
 
@@ -366,6 +362,11 @@ body {
 
   table th {
     letter-spacing: 1px;
+    width: 30%;
+  }
+
+  table td {
+    width: 70%;
   }
 
   .ticket table {
@@ -378,15 +379,6 @@ body {
     padding: 5px;
     vertical-align: middle;
   }
-
-  .ticket table th {
-    width: 30%;
-  }
-
-  .ticket table td {
-    width: 70%;
-  }
-
 
 
 
