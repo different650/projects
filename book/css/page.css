@@ -1,4 +1,88 @@
 @media screen and (min-width: 1024px) {
+   .book-list {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+  }
+
+  .book-list ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #111;
+  }
+
+  .book-list ul li {
+    border-bottom: 1px solid #111;
+    border-right: 1px solid #111;
+  }
+
+  .book-list ul li:nth-child(5n) {
+    border-right: none;
+  }
+
+  .book-list ul li:nth-last-child(-n+5) {
+    border-bottom: none;
+  }
+
+  .book-list ul li a {
+    height: 100%;
+    display: block;
+  }
+
+  .book-list ul li img {
+    max-height: 220px;
+    width: auto;
+    display: block;
+    border: 1px solid #111;
+    margin: 10% auto;
+  }
+
+  .book-list ul li figure {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .book-list ul li figure figcaption {
+    flex: 1;
+  }
+
+  .book-list ul li figure figcaption dl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .book-list ul li figure figcaption dl dt {
+    margin-bottom: 10%;
+    padding: 0 5%;
+    line-height: 25px;
+    white-space: normal;
+    /* 줄바꿈 허용 */
+    word-break: keep-all;
+    /* 단어 중간에서 잘리지 않도록 */
+    overflow-wrap: normal;
+    /* 강제 줄바꿈 방지 */
+  }
+
+  .book-list ul li figure figcaption dl dd {
+    margin-top: auto;
+    border-top: 1px solid #111;
+    padding: 5%;
+  }
+
+  .book-list ul li:hover dd {
+    background-color: #e07a5f;
+    color: #fff;
+  }
+
   figure.bookNotes {
     flex: 5;
     text-align: left;
@@ -13,9 +97,7 @@
     padding: 5%;
     display: flex;
     justify-content: center;
-    /* 좌우 중앙 정렬 */
     align-items: center;
-    /* 세로 중앙 정렬 (원하면) */
   }
 
   figure.bookNotes>div img {
@@ -43,9 +125,7 @@
   figure.bookNotes figcaption div:first-of-type {
     flex: 1;
     overflow-y: auto;
-    /* 내용 길면 스크롤 */
     margin-bottom: 5%;
-    /* max-height: 665px; */
   }
 
   figure.bookNotes figcaption div:first-of-type p {
@@ -75,7 +155,6 @@
   }
 
   figure.bookNotes table td {
-    /* padding: 10px; */
     line-height: 25px;
     white-space: normal;
     /* 줄바꿈 허용 */
@@ -99,6 +178,92 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+   .book-list {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+  }
+
+  .book-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #111;
+    height: calc(100vh - 70px - 60px);
+    overflow-y: auto;
+  }
+
+  .book-list ul li {
+    border-bottom: 1px solid #111;
+    border-right: 1px solid #111;
+  }
+
+  .book-list ul li:nth-child(3n) {
+    border-right: none;
+  }
+
+  .book-list ul li:last-of-type {
+    border-bottom: none;
+  }
+
+  .book-list ul li a {
+    height: 100%;
+    display: block;
+  }
+
+  .book-list ul li img {
+    max-height: 200px;
+    width: auto;
+    display: block;
+    border: 1px solid #111;
+    margin: 8% auto;
+  }
+
+  .book-list ul li figure {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .book-list ul li figure figcaption {
+    flex: 1;
+  }
+
+  .book-list ul li figure figcaption dl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .book-list ul li figure figcaption dl dt {
+    margin-bottom: 8%;
+    padding: 0 5%;
+    line-height: 22px;
+    white-space: normal;
+    /* 줄바꿈 허용 */
+    word-break: keep-all;
+    /* 단어 중간에서 잘리지 않도록 */
+    overflow-wrap: normal;
+    /* 강제 줄바꿈 방지 */
+  }
+
+  .book-list ul li figure figcaption dl dd {
+    margin-top: auto;
+    border-top: 1px solid #111;
+    line-height: 38px;
+    min-height: 38px;
+  }
+
+  .book-list ul li:hover dd {
+    background-color: #e07a5f;
+    color: #fff;
+  }
+
   figure.bookNotes {
     flex: 3;
     text-align: left;
@@ -147,9 +312,7 @@
   figure.bookNotes figcaption div:first-of-type {
     flex: 1;
     overflow-y: auto;
-    /* 내용 길면 스크롤 */
     margin-bottom: 5%;
-    /* max-height: 500px; */
   }
 
   figure.bookNotes figcaption div:first-of-type p {
@@ -205,6 +368,86 @@
 }
 
 @media screen and (max-width: 767px) {
+   .book-list {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .book-list ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #111;
+    height: calc(100vh - 50px - 40px);
+    overflow-y: auto;
+  }
+
+  .book-list ul li {
+    border-bottom: 1px solid #111;
+  }
+
+  .book-list ul li:last-of-type {
+    border-bottom: none;
+  }
+
+  .book-list ul li a {
+    height: 100%;
+    display: block;
+  }
+
+  .book-list ul li img {
+    max-height: 180px;
+    width: auto;
+    display: block;
+    border: 1px solid #111;
+    margin: 5% auto;
+  }
+
+  .book-list ul li figure {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .book-list ul li figure figcaption {
+    flex: 1;
+  }
+
+  .book-list ul li figure figcaption dl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .book-list ul li figure figcaption dl dt {
+    margin-bottom: 6%;
+    padding: 0 5%;
+    line-height: 20px;
+    white-space: normal;
+    /* 줄바꿈 허용 */
+    word-break: keep-all;
+    /* 단어 중간에서 잘리지 않도록 */
+    overflow-wrap: normal;
+    /* 강제 줄바꿈 방지 */
+  }
+
+  .book-list ul li figure figcaption dl dd {
+    margin-top: auto;
+    border-top: 1px solid #111;
+    padding: 3%;
+  }
+
+  .book-list ul li:hover dd {
+    background-color: #e07a5f;
+    color: #fff;
+  }
+
   figure.bookNotes {
     flex: 2;
     flex-direction: column;
@@ -243,7 +486,6 @@
   figure.bookNotes figcaption div:first-of-type {
     flex: 1;
     overflow-y: auto;
-    /* 내용 길면 스크롤 */
     margin-bottom: 5%;
     min-height: 100px;
   }
