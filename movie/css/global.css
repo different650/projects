@@ -259,8 +259,9 @@ body {
   }
 
   .movie_list ul {
-    width: 100%;
+    width: 70%;
     height: 100%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
